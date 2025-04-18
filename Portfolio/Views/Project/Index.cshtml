@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "My Projects";
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-4 fw-bold text-warning">Welcome to My Projects</h1>
+        <p class="text-white">Here’s a list of all my awesome work 🚀</p>
+    </div>
+
+    <div class="row g-4">
+        @foreach (var project in Model)
+        {
+            <div class="col-md-4">
+                <div class="card bg-dark text-white shadow-lg border-0">
+                    <img src="@project.ImageURL" class="card-img-top" alt="@project.Title" />
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                        <a href="@project.ProjectURL" target="_blank" class="btn btn-outline-warning btn-sm">
+                            🔗 View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Styling for background and text -->
+<style>
+    body {
+        background-color: #121212;
+        color: #f1f1f1;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1, h2 {
+        color: #ffc107;
+    }
+
+    .btn-outline-warning {
+        border-color: #ffc107;
+        color: #ffc107;
+    }
+
+        .btn-outline-warning:hover {
+            background-color: #ffc107;
+            color: #121212;
+        }
+
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-img-top {
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #ccc;
+    }
+
+    .card-footer {
+        background-color: #222;
+    }
+</style>

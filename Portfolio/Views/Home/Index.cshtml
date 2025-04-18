@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Heba Nagy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Project" asp-action="Index">
+                        <i class="fas fa-briefcase"></i> Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Skill" asp-action="Index">
+                        <i class="fas fa-cogs"></i> Skills
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- About Me Section -->
+<section class="container my-5 text-white">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h2 class="mb-4">About Me</h2>
+            <img src="~/images/profile.jpeg" alt="Profile Picture"
+                 class="img-fluid rounded-circle mb-4 shadow" style="max-width: 200px;" />
+
+            <p>
+                Hello! I'm <strong>Heba Nagy</strong>, a passionate and detail-oriented web developer with a strong background in back-end development.
+                I specialize in building scalable and secure web applications using <strong>.NET Core</strong> and the <strong>MVC architecture</strong>.
+            </p>
+
+            <p>
+                I'm constantly learning and keeping up with the latest technologies to improve my skills and deliver high-quality software solutions.
+                I enjoy solving complex problems and turning ideas into functional, user-friendly web experiences.
+            </p>
+
+            <p>
+                When I’m not coding, I enjoy reading tech blogs, exploring UI/UX trends, and sometimes just relaxing with a good book or music 🎧📚.
+            </p>
+
+            <p>
+                Feel free to explore my portfolio to see some of the projects I've worked on — each one tells a different story of creativity and technical growth.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="container my-5 text-white">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4 text-center">Contact Me</h2>
+            <div class="text-center mb-3">
+                <p><i class="fas fa-envelope text-warning"></i> <a href="mailto:nagyheba537.com" class="text-white">heba@example.com</a></p>
+                <p><i class="fab fa-linkedin text-warning"></i> <a href="https://www.linkedin.com/in/heba-nagy-a46744250/" class="text-white" target="_blank">linkedin.com/in/hebanagy</a></p>
+                <p><i class="fab fa-github text-warning"></i> <a href="https://github.com/hebanagy15" class="text-white" target="_blank">github.com/hebanagy</a></p>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your message..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Background Styling -->
+<style>
+    body {
+        background-color: #121212;
+        color: #f1f1f1;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        transition: 0.3s ease-in-out;
+    }
+
+        .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+    h2 {
+        color: #ffc107;
+    }
+
+    strong {
+        color: #f8f9fa;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+</style>
+
